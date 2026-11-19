@@ -1,0 +1,28 @@
+{
+	"name": "bloompath",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-08-04",
+	"observability": {
+		"enabled": true,
+	},
+	// D1 Database binding
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "bloompath",
+			"database_id": "9ca7c3df-5417-42c0-89b3-077ea60e1e9b"
+		}
+	],
+	// Workers AI binding
+	"ai": {
+		"binding": "AI"
+	},
+	// Secrets set via: wrangler secret put JWT_SECRET
+	// JWT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET,
+	// FACEBOOK_APP_ID, FACEBOOK_APP_SECRET,
+	// EMAIL_FROM (sender address), RESEND_API_KEY (or SES creds)
+	"vars": {
+		"ENVIRONMENT": "production",
+		"APP_NAME": "BloomPath"
+	}
+}

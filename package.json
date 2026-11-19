@@ -1,0 +1,25 @@
+{
+	"name": "bloompath-be",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types",
+		"db:migrate": "wrangler d1 migrations apply bloompath-db",
+		"db:migrate:local": "wrangler d1 migrations apply bloompath-db --local"
+	},
+	"dependencies": {
+		"hono": "^4.6.20",
+		"jose": "^5.9.6"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.5.29",
+		"@cloudflare/workers-types": "^4.20241127.0",
+		"typescript": "^5.5.2",
+		"vitest": "~2.1.4",
+		"wrangler": "^4"
+	}
+}
